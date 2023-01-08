@@ -117,7 +117,7 @@ export class PagerView extends React.Component<PagerViewProps> {
    * The recommended way is using the scrollEnabled prop, however, there might be a case where a
    * imperative solution is more useful (e.g. for not blocking an animation)
    */
-  public setScrollEnabled = (scrollEnabled: boolean) => {
+  public setScrollEnabledImperatively = (scrollEnabled: boolean) => {
     if (this.pagerView) {
       PagerViewCommands.setScrollEnabledImperatively(
         this.pagerView,
