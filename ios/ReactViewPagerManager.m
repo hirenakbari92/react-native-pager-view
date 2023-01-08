@@ -60,7 +60,9 @@ RCT_EXPORT_METHOD(setPage
 RCT_EXPORT_METHOD(setPageWithoutAnimation
                   : (nonnull NSNumber *)reactTag index
                   : (nonnull NSNumber *)index) {
-    [self goToPage:reactTag index:index animated:false];
+    BOOL isEnabled = [index boolValue];
+    // [self goToPage:reactTag index:index animated:false];
+    [self changeScrollEnabled:reactTag enabled:isEnabled];
 }
 
 RCT_EXPORT_METHOD(setScrollEnabled
