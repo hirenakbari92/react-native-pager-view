@@ -59,7 +59,7 @@ export const Commands: NativeCommands = codegenNativeCommands<NativeCommands>({
   supportedCommands: [
     'setPage',
     'setPageWithoutAnimation',
-    'setScrollEnabled',
+    'setScrollEnabledImperatively',
   ],
 });
 
